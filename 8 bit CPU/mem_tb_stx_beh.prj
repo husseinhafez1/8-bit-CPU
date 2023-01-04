@@ -1,0 +1,2 @@
+vhdl isim_temp "MAR.vhd"
+vhdl isim_temp "mar_mem_test.vhd"

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    17:42:40 12/30/2022 
+-- Create Date:    19:08:28 01/04/2023 
 -- Design Name: 
--- Module Name:    program_counter - Behavioral 
+-- Module Name:    mar_mem_tb - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,7 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,37 +29,33 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity program_counter is
+entity mar_mem_tb is
+end mar_mem_tb;
+
+architecture Behavioral of mar_mem_tb is
+component mar is
     Port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
-           en : in  STD_LOGIC;
-			  oe 	: in std_logic;
            load : in  STD_LOGIC;
            input : in  STD_LOGIC_VECTOR (3 downto 0);
            output : out  STD_LOGIC_VECTOR (3 downto 0));
-end program_counter;
-
-architecture Behavioral of program_counter is
-
-signal count:std_logic_vector(3 downto 0):="0000";
-
+end component;
+component program_counter is
+    Port ( clk : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+           en : in  STD_LOGIC;
+           load : in  STD_LOGIC;
+           input : in  STD_LOGIC_VECTOR (3 downto 0);
+           output : out  STD_LOGIC_VECTOR (3 downto 0));
+end component;
+signal clk_sig: std_logic;
+signal rst_sig: std_logic;
+signal en_sig: std_logic;
+signal ld_sig: std_logic;
+signal input_sig: std_logic;
+signal output_sig: std_logic;
 begin
 
-process (clk, rst)
-begin
-	if rst = '1' then
-		count<=(others=>'0');
-	elsif rising_edge(clk) then
-		if load = '1' then
-			count <= input;
-		elsif en = '1' then
-			count<=count + 1;
-		end if;
-	end if;
-
-end process;
-
-output<=count when oe = '1' else "0000";
 
 end Behavioral;
 

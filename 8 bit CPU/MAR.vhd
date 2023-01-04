@@ -30,28 +30,33 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mar is
-    Port ( clk : in  STD_LOGIC;
-           rst : in  STD_LOGIC;
-           load : in  STD_LOGIC;
-           input : in  STD_LOGIC_VECTOR (3 downto 0);
-           output : out  STD_LOGIC_VECTOR (3 downto 0));
-end mar;
+entity mar is 
+port(
+	clk : in std_logic;
+	rst : in std_logic;
+	load	: in std_logic;
+	input	: in std_logic_vector(3 downto 0);
+	output  : out std_logic_vector(3 downto 0)
+);
+end entity;
 
-architecture Behavioral of mar is
-signal stored: std_logic_vector(7 downto 0):=(others=>'Z');
+architecture behave of mar is
+
+signal stored_value : std_logic_vector(3 downto 0):=(others=>'Z');
+
 begin
-
-process (clk, rst)
+process(clk,rst)
 begin
 	if rst = '1' then
-		stored<=(others=>'Z');
+		stored_value<=(others=>'Z');
 	elsif rising_edge(clk) then
 		if load = '1' then
-			stored<=input;
-		end if;
+			stored_value <= input;
+		end if;	
 	end if;
 end process;
-output<=stored;
-end Behavioral;
+
+output<=stored_value;
+
+end behave;
 

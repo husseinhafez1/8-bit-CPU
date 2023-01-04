@@ -36,6 +36,7 @@ entity ALU is
            reg_a_in : in  STD_LOGIC_VECTOR (7 downto 0);
            reg_b_in : in  STD_LOGIC_VECTOR (7 downto 0);
            cout : out  STD_LOGIC;
+			  zero_flag: out std_logic;
            res : out  STD_LOGIC_VECTOR (7 downto 0));
 end ALU;
 
@@ -52,6 +53,7 @@ begin
 	end if;
 end process;
 cout<=result(8);
+zero_flag<='1' when result(7 downto 0) = "00000000" else '0';
 res<=result(7 downto 0);
 end Behavioral;
 

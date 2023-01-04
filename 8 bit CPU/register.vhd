@@ -41,7 +41,7 @@ entity reg is
 end reg;
 
 architecture Behavioral of reg is
-signal stored: std_logic_vector(7 downto 0):=(others=>'Z');
+signal stored: std_logic_vector(7 downto 0):=(others=>'0');
 begin
 
 process (clk, rst)

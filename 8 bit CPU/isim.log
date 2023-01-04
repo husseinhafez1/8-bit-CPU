@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\husse\Desktop\dababy\cpu\pc_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/husse/Desktop/dababy/cpu/pc_test_isim_beh.wdb 
+Running: C:\Users\husse\Desktop\dababy\cpu\alu_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/husse/Desktop/dababy/cpu/alu_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -27,4 +27,5 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /alu_tb/alu1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
