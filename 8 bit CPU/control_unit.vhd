@@ -19,40 +19,43 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity control_unit is
-	port (
-		clk: in std_logic;
-		rst: in std_logic;
-		inst: in std_logic_vector(3 downto 0);
-		do: out std_logic_vector(16 downto 0)
-	);
+Port ( 
+clk: in std_logic;
+rst: in std_logic;
+inst: in std_logic_vector(3 downto 0);
+do : out std_logic_vector(16 downto 0)
+);
 end control_unit;
 
 architecture Behavioral of control_unit is
-signal counter: std_logic_vector(3 downto 0);
+
+signal counter: std_logic_vector(3 downto 0):="0000";
 begin
-process(clk, reset)
+
+count_proc:process(clk,rst)
+
 begin
-	if (rst = '1') then
-		counter<="0000";
-	elsif rising_edge(clk) then
-		if counter = "1010" then
-			counter<="0000";
-		else
-			counter<=std_logic_vector(unsigned(counter+1));
-		end if;
-	end if;
+
+if rst='1' then
+    counter<="0000";
+elsif rising_edge(clk) then
+    if(counter = "0110")then
+        counter<="0000";
+    else
+        counter<= std_logic_vector(unsigned(counter+1));
+    end if;
+    
+end if;
 end process;
+
+
+--HLT--OUT_IN--OUT_OUT--ALU_OP_EN--ALU_EN--PC_EN--PC_IN--PC_OUT-MAR_IN--RAM_IN--RAM_OUT--A_IN--A_OUT--B_IN--B_OUT--INST_I--INST_OUT
+--16 --15 -----14--------13--------12------11------10-----9-----8---------7-------6-------5-----4------3------2------1--------0
 do <= "00000001100000000" when counter = "0000" else
       "00000100001000010" when counter = "0001" else 
       
@@ -104,5 +107,10 @@ do <= "00000001100000000" when counter = "0000" else
       "00000000000000000" when (counter= "0100" and inst="0110") else    
       "00000000000000000" when (counter= "0101" and inst="0110") else    
       "00000000000000000" when (counter= "0110" and inst="0110") ;
+      
+      
+      
+      
+
 end Behavioral;
 

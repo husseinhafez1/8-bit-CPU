@@ -19,16 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.std_logic_unsigned.all;
 
 entity mar is 
 port(
@@ -40,7 +31,7 @@ port(
 );
 end entity;
 
-architecture behave of mar is
+architecture Behavioral of mar is
 
 signal stored_value : std_logic_vector(3 downto 0):=(others=>'Z');
 
@@ -58,5 +49,5 @@ end process;
 
 output<=stored_value;
 
-end behave;
+end Behavioral;
 

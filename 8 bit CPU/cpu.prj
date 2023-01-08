@@ -1,0 +1,7 @@
+vhdl work "register.vhd"
+vhdl work "program_counter.vhd"
+vhdl work "memory.vhd"
+vhdl work "MAR.vhd"
+vhdl work "control_unit.vhd"
+vhdl work "ALU.vhd"
+vhdl work "cpu.vhd"

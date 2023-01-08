@@ -19,41 +19,46 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+entity alu is
+port(
+	en : in std_logic;
+	op : in std_logic;
+	reg_a_in : in std_logic_vector(7 downto 0);
+	reg_b_in : in std_logic_vector(7 downto 0);
+	carry_out : out std_logic;
+	zero_flag : out std_logic;
+	res_out : out std_logic_vector(7 downto 0)
+);
+end entity;
 
-entity ALU is
-    Port ( en : in  STD_LOGIC;
-           op : in  STD_LOGIC;
-           reg_a_in : in  STD_LOGIC_VECTOR (7 downto 0);
-           reg_b_in : in  STD_LOGIC_VECTOR (7 downto 0);
-           cout : out  STD_LOGIC;
-			  zero_flag: out std_logic;
-           res : out  STD_LOGIC_VECTOR (7 downto 0));
-end ALU;
+architecture Behavioral of alu is 
 
-architecture Behavioral of ALU is
-signal result: STD_LOGIC_VECTOR (8 downto 0);
+signal result : std_logic_vector(8 downto 0);
 begin
-
-process (reg_a_in, reg_b_in, op)
-begin
-	if op = '1' then
-		result<=('0' & reg_a_in) + ('0' & reg_b_in);
-	else
-		result<=('0' & reg_a_in) - ('0' & reg_b_in);
-	end if;
-end process;
-cout<=result(8);
-zero_flag<='1' when result(7 downto 0) = "00000000" else '0';
-res<=result(7 downto 0);
+	
+	process(reg_a_in,reg_b_in,op)
+	begin
+		if op = '0' then
+			result <= ext(reg_a_in,9) + ext(reg_b_in,9);
+		elsif op = '1' then
+			result <= ext(reg_a_in,9) - ext(reg_b_in,9);
+		end if;
+	end process;
+	
+carry_out<= result(8) ;
+zero_flag<= '1' when result(7 downto 0) = "00000000" else '0';
+res_out<=result(7 downto 0) when en='1' else (others=>'Z');	
+	
+	
+	
+	
+	
+	
+	
 end Behavioral;
 

@@ -36,7 +36,7 @@ entity alu_tb is
 	
 end entity;
 
-architecture behave of alu_tb is
+architecture Behavioral of alu_tb is
 
 component alu is 
 port(
@@ -101,4 +101,4 @@ end process;
 
 
 
-end behave;
+end Behavioral;

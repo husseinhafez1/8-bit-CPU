@@ -19,42 +19,43 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
+use IEEE.std_logic_unsigned.all;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+entity reg is 
+port(
+	clk : in std_logic;
+	rst : in std_logic;
+	out_en : in std_logic;
+	load	: in std_logic;
+	input	: in std_logic_vector(7 downto 0);
+	output 	: out std_logic_vector(7 downto 0);
+	output_alu : out std_logic_vector(7 downto 0)
+);
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+end entity;
 
-entity reg is
-    Port ( clk : in  STD_LOGIC;
-           rst : in  STD_LOGIC;
-           out_en : in  STD_LOGIC;
-           load : in  STD_LOGIC;
-           input : in  STD_LOGIC_VECTOR (7 downto 0);
-           output : out  STD_LOGIC_VECTOR (7 downto 0);
-           output_alu : out  STD_LOGIC_VECTOR (7 downto 0));
-end reg;
 
 architecture Behavioral of reg is
-signal stored: std_logic_vector(7 downto 0):=(others=>'0');
+
+signal stored_value : std_logic_vector(7 downto 0):=(others=>'Z');
+
 begin
 
-process (clk, rst)
+process(clk,rst)
 begin
 	if rst = '1' then
-		stored<=(others=>'Z');
+		stored_value<=(others=>'Z');
 	elsif rising_edge(clk) then
 		if load = '1' then
-			stored<=input;
-		end if;
+			stored_value <= input;
+		end if;	
 	end if;
 end process;
-output<=stored when out_en ='1' else (others=>'Z');
-output_alu<=stored;
+
+
+output<= stored_value when out_en = '1' else (others=>'Z');
+output_alu<=stored_value;
+
+
 end Behavioral;
 

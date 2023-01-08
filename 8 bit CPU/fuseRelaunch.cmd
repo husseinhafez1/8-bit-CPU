@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/husse/Desktop/dababy/cpu/alu_tb_isim_beh.exe" -prj "C:/Users/husse/Desktop/dababy/cpu/alu_tb_beh.prj" "work.alu_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/husse/Desktop/dababy/cpu/cpu_tb_isim_beh.exe" -prj "C:/Users/husse/Desktop/dababy/cpu/cpu_tb_beh.prj" "work.cpu_tb" 
