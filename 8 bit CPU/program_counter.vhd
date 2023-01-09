@@ -36,14 +36,14 @@ end entity;
 
 architecture Behavioral of pc is
 
-signal count : std_logic_vector(3 downto 0) := "ZZZZ";
+signal count : std_logic_vector(3 downto 0) := "0000";
 
 begin
 
 process(clk,rst)
 begin
 	if rst = '1' then
-		count<=(others=>'Z');
+		count<=(others=>'0');
 	elsif rising_edge(clk) then
 		if ld = '1' then
 			count <= input;

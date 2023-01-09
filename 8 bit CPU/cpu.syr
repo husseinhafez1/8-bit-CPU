@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: cpu.prj
 
@@ -166,23 +166,31 @@ Unit <cpu> synthesized.
 
 Synthesizing Unit <pc>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\program_counter.vhd".
-    Found 4-bit register for signal <count>.
-    Found 4-bit adder for signal <count[3]_GND_6_o_add_0_OUT> created at line 51.
+    Found 1-bit register for signal <PWR_7_o_clk_DFF_5>.
+    Found 1-bit register for signal <PWR_8_o_clk_DFF_6>.
+    Found 1-bit register for signal <PWR_9_o_clk_DFF_7>.
+    Found 1-bit register for signal <PWR_10_o_clk_DFF_8>.
+    Found 4-bit register for signal <count[3]_dff_3_OUT>.
+    Found 4-bit adder for signal <count[3]_GND_6_o_add_0_OUT[3:0]> created at line 51.
+    Found 1-bit tristate buffer for signal <count<3>> created at line 43
+    Found 1-bit tristate buffer for signal <count<2>> created at line 43
+    Found 1-bit tristate buffer for signal <count<1>> created at line 43
+    Found 1-bit tristate buffer for signal <count<0>> created at line 43
     Found 1-bit tristate buffer for signal <output<3>> created at line 57
     Found 1-bit tristate buffer for signal <output<2>> created at line 57
     Found 1-bit tristate buffer for signal <output<1>> created at line 57
     Found 1-bit tristate buffer for signal <output<0>> created at line 57
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   4 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
-	inferred   4 Tristate(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   8 Tristate(s).
 Unit <pc> synthesized.
 
 Synthesizing Unit <control_unit>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\control_unit.vhd".
     Found 4-bit register for signal <counter>.
-    Found 4-bit adder for signal <counter[3]_GND_12_o_add_1_OUT> created at line 59.
+    Found 4-bit adder for signal <counter[3]_GND_21_o_add_1_OUT> created at line 50.
 WARNING:Xst:737 - Found 1-bit latch for signal <do<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <do<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <do<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -206,15 +214,15 @@ Unit <control_unit> synthesized.
 
 Synthesizing Unit <mar>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\MAR.vhd".
-    Found 1-bit register for signal <PWR_11_o_clk_DFF_5>.
-    Found 1-bit register for signal <PWR_12_o_clk_DFF_6>.
-    Found 1-bit register for signal <PWR_13_o_clk_DFF_7>.
-    Found 1-bit register for signal <PWR_14_o_clk_DFF_8>.
-    Found 4-bit register for signal <stored_value[3]_dff_1_OUT>.
-    Found 1-bit tristate buffer for signal <stored_value<3>> created at line 39
-    Found 1-bit tristate buffer for signal <stored_value<2>> created at line 39
-    Found 1-bit tristate buffer for signal <stored_value<1>> created at line 39
-    Found 1-bit tristate buffer for signal <stored_value<0>> created at line 39
+    Found 1-bit register for signal <PWR_15_o_clk_DFF_9>.
+    Found 1-bit register for signal <PWR_16_o_clk_DFF_10>.
+    Found 1-bit register for signal <PWR_17_o_clk_DFF_11>.
+    Found 1-bit register for signal <PWR_18_o_clk_DFF_12>.
+    Found 4-bit register for signal <output[3]_dff_1_OUT>.
+    Found 1-bit tristate buffer for signal <output<3>> created at line 37
+    Found 1-bit tristate buffer for signal <output<2>> created at line 37
+    Found 1-bit tristate buffer for signal <output<1>> created at line 37
+    Found 1-bit tristate buffer for signal <output<0>> created at line 37
     Summary:
 	inferred   8 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -224,135 +232,135 @@ Unit <mar> synthesized.
 Synthesizing Unit <mem>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\memory.vhd".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_4_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_6_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_8_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_10_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_12_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_14_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_16_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_18_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_21_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_23_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_25_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_27_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_29_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_31_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_33_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_35_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_38_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_40_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_42_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_44_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_46_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_48_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_50_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_52_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_55_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_57_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_59_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_61_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_63_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_65_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_67_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_69_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_72_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_74_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_76_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_78_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_80_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_82_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_84_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_86_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_89_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_91_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_93_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_95_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_97_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_99_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_101_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_103_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_106_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_108_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_110_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_112_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_114_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_116_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_118_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_120_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_123_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_125_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_127_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_129_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_131_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_133_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_135_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_137_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_140_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_142_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_144_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_146_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_148_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_150_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_152_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_154_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_157_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_159_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_161_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_163_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_165_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_167_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_169_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_171_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_174_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_176_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_178_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_180_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_182_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_184_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_186_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_188_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_191_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_193_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_195_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_197_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_199_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_201_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_203_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_205_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_208_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_210_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_212_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_214_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_216_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_218_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_220_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_222_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_225_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_227_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_229_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_231_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_233_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_235_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_237_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_239_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_242_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_244_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_246_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_248_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_250_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_252_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_254_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_256_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_259_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_261_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_263_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_265_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_267_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_269_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_271_o> created at line 90.
-    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_273_o> created at line 90.
-    Found 8-bit 16-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT> created at line 91.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_4_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_6_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_8_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_10_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_12_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_14_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_16_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_18_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_21_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_23_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_25_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_27_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_29_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_31_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_33_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_35_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_38_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_40_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_42_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_44_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_46_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_48_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_50_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_52_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_55_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_57_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_59_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_61_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_63_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_65_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_67_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_69_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_72_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_74_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_76_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_78_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_80_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_82_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_84_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_86_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_89_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_91_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_93_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_95_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_97_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_99_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_101_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_103_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_106_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_108_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_110_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_112_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_114_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_116_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_118_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_120_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_123_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_125_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_127_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_129_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_131_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_133_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_135_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_137_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_140_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_142_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_144_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_146_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_148_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_150_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_152_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_154_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_157_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_159_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_161_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_163_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_165_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_167_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_169_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_171_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_174_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_176_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_178_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_180_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_182_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_184_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_186_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_188_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_191_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_193_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_195_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_197_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_199_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_201_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_203_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_205_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_208_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_210_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_212_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_214_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_216_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_218_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_220_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_222_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_225_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_227_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_229_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_231_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_233_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_235_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_237_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_239_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_242_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_244_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_246_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_248_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_250_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_252_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_254_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_256_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_Mux_259_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][6]_Mux_261_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][5]_Mux_263_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][4]_Mux_265_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][3]_Mux_267_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][2]_Mux_269_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][1]_Mux_271_o> created at line 50.
+    Found 1-bit 15-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][0]_Mux_273_o> created at line 50.
+    Found 8-bit 16-to-1 multiplexer for signal <addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT> created at line 51.
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<15><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<15><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<15><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -480,14 +488,14 @@ WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<0><3>>. Latches may be g
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<0><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<0><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<0><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 1-bit tristate buffer for signal <data_out<7>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<6>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<5>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<4>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<3>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<2>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<1>> created at line 91
-    Found 1-bit tristate buffer for signal <data_out<0>> created at line 91
+    Found 1-bit tristate buffer for signal <data_out<7>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<6>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<5>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<4>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<3>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<2>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<1>> created at line 51
+    Found 1-bit tristate buffer for signal <data_out<0>> created at line 51
 WARNING:Xst:737 - Found 1-bit latch for signal <mem_obj<15><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred 128 Latch(s).
@@ -497,14 +505,14 @@ Unit <mem> synthesized.
 
 Synthesizing Unit <reg>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\register.vhd".
-    Found 1-bit register for signal <PWR_148_o_clk_DFF_17>.
-    Found 1-bit register for signal <PWR_149_o_clk_DFF_18>.
-    Found 1-bit register for signal <PWR_150_o_clk_DFF_19>.
-    Found 1-bit register for signal <PWR_151_o_clk_DFF_20>.
     Found 1-bit register for signal <PWR_152_o_clk_DFF_21>.
     Found 1-bit register for signal <PWR_153_o_clk_DFF_22>.
     Found 1-bit register for signal <PWR_154_o_clk_DFF_23>.
     Found 1-bit register for signal <PWR_155_o_clk_DFF_24>.
+    Found 1-bit register for signal <PWR_156_o_clk_DFF_25>.
+    Found 1-bit register for signal <PWR_157_o_clk_DFF_26>.
+    Found 1-bit register for signal <PWR_158_o_clk_DFF_27>.
+    Found 1-bit register for signal <PWR_159_o_clk_DFF_28>.
     Found 8-bit register for signal <stored_value[7]_dff_1_OUT>.
     Found 1-bit tristate buffer for signal <stored_value<7>> created at line 44
     Found 1-bit tristate buffer for signal <stored_value<6>> created at line 44
@@ -530,16 +538,16 @@ Unit <reg> synthesized.
 
 Synthesizing Unit <alu>.
     Related source file is "C:\Users\husse\Desktop\dababy\cpu\ALU.vhd".
-    Found 9-bit adder for signal <GND_209_o_GND_209_o_add_0_OUT> created at line 47.
-    Found 9-bit subtractor for signal <GND_209_o_GND_209_o_sub_2_OUT<8:0>> created at line 49.
-    Found 1-bit tristate buffer for signal <res_out<7>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<6>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<5>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<4>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<3>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<2>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<1>> created at line 55
-    Found 1-bit tristate buffer for signal <res_out<0>> created at line 55
+    Found 9-bit adder for signal <GND_218_o_GND_218_o_add_0_OUT> created at line 48.
+    Found 9-bit subtractor for signal <GND_218_o_GND_218_o_sub_2_OUT<8:0>> created at line 50.
+    Found 1-bit tristate buffer for signal <res_out<7>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<6>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<5>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<4>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<3>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<2>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<1>> created at line 56
+    Found 1-bit tristate buffer for signal <res_out<0>> created at line 56
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   9 Multiplexer(s).
@@ -554,20 +562,20 @@ Macro Statistics
  4-bit adder                                           : 2
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 43
- 1-bit register                                        : 36
+# Registers                                            : 47
+ 1-bit register                                        : 40
  4-bit register                                        : 3
  8-bit register                                        : 4
 # Latches                                              : 142
  1-bit latch                                           : 142
-# Multiplexers                                         : 561
+# Multiplexers                                         : 562
  1-bit 15-to-1 multiplexer                             : 128
  1-bit 2-to-1 multiplexer                              : 425
- 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 2-to-1 multiplexer                              : 4
  8-bit 16-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 4
-# Tristates                                            : 92
- 1-bit tristate buffer                                 : 92
+# Tristates                                            : 96
+ 1-bit tristate buffer                                 : 96
 
 =========================================================================
 
@@ -575,35 +583,33 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <PWR_11_o_clk_DFF_5> in Unit <mar_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_12_o_clk_DFF_6> <PWR_13_o_clk_DFF_7> <PWR_14_o_clk_DFF_8> 
-INFO:Xst:2261 - The FF/Latch <PWR_148_o_clk_DFF_17> in Unit <inst_reg_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_149_o_clk_DFF_18> <PWR_150_o_clk_DFF_19> <PWR_151_o_clk_DFF_20> <PWR_152_o_clk_DFF_21> <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> 
-INFO:Xst:2261 - The FF/Latch <PWR_148_o_clk_DFF_17> in Unit <reg_A_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_149_o_clk_DFF_18> <PWR_152_o_clk_DFF_21> <PWR_150_o_clk_DFF_19> <PWR_151_o_clk_DFF_20> <PWR_155_o_clk_DFF_24> <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> 
-INFO:Xst:2261 - The FF/Latch <PWR_148_o_clk_DFF_17> in Unit <reg_B_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_149_o_clk_DFF_18> <PWR_152_o_clk_DFF_21> <PWR_150_o_clk_DFF_19> <PWR_151_o_clk_DFF_20> <PWR_155_o_clk_DFF_24> <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> 
-INFO:Xst:2261 - The FF/Latch <PWR_148_o_clk_DFF_17> in Unit <reg_op_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_149_o_clk_DFF_18> <PWR_150_o_clk_DFF_19> <PWR_151_o_clk_DFF_20> <PWR_152_o_clk_DFF_21> <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> 
+INFO:Xst:2261 - The FF/Latch <PWR_7_o_clk_DFF_5> in Unit <pc_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_8_o_clk_DFF_6> <PWR_9_o_clk_DFF_7> <PWR_10_o_clk_DFF_8> 
+INFO:Xst:2261 - The FF/Latch <PWR_15_o_clk_DFF_9> in Unit <mar_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_16_o_clk_DFF_10> <PWR_17_o_clk_DFF_11> <PWR_18_o_clk_DFF_12> 
+INFO:Xst:2261 - The FF/Latch <PWR_152_o_clk_DFF_21> in Unit <inst_reg_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> <PWR_156_o_clk_DFF_25> <PWR_157_o_clk_DFF_26> <PWR_158_o_clk_DFF_27> <PWR_159_o_clk_DFF_28> 
+INFO:Xst:2261 - The FF/Latch <PWR_152_o_clk_DFF_21> in Unit <reg_A_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_153_o_clk_DFF_22> <PWR_156_o_clk_DFF_25> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> <PWR_159_o_clk_DFF_28> <PWR_157_o_clk_DFF_26> <PWR_158_o_clk_DFF_27> 
+INFO:Xst:2261 - The FF/Latch <PWR_152_o_clk_DFF_21> in Unit <reg_B_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_153_o_clk_DFF_22> <PWR_156_o_clk_DFF_25> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> <PWR_159_o_clk_DFF_28> <PWR_157_o_clk_DFF_26> <PWR_158_o_clk_DFF_27> 
+INFO:Xst:2261 - The FF/Latch <PWR_152_o_clk_DFF_21> in Unit <reg_op_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> <PWR_156_o_clk_DFF_25> <PWR_157_o_clk_DFF_26> <PWR_158_o_clk_DFF_27> <PWR_159_o_clk_DFF_28> 
 
 Synthesizing (advanced) Unit <control_unit>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 Unit <control_unit> synthesized (advanced).
 
-Synthesizing (advanced) Unit <pc>.
-The following registers are absorbed into counter <count>: 1 register on signal <count>.
-Unit <pc> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 2
- 4-bit up counter                                      : 2
-# Registers                                            : 72
- Flip-Flops                                            : 72
-# Multiplexers                                         : 559
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+# Multiplexers                                         : 561
  1-bit 15-to-1 multiplexer                             : 128
  1-bit 2-to-1 multiplexer                              : 425
- 4-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 3
  8-bit 16-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 4
 
@@ -612,8 +618,9 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <PWR_11_o_clk_DFF_5> in Unit <mar> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_12_o_clk_DFF_6> <PWR_13_o_clk_DFF_7> <PWR_14_o_clk_DFF_8> 
-INFO:Xst:2261 - The FF/Latch <PWR_148_o_clk_DFF_17> in Unit <reg> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_149_o_clk_DFF_18> <PWR_152_o_clk_DFF_21> <PWR_150_o_clk_DFF_19> <PWR_151_o_clk_DFF_20> <PWR_155_o_clk_DFF_24> <PWR_153_o_clk_DFF_22> <PWR_154_o_clk_DFF_23> 
+INFO:Xst:2261 - The FF/Latch <PWR_7_o_clk_DFF_5> in Unit <pc> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_8_o_clk_DFF_6> <PWR_9_o_clk_DFF_7> <PWR_10_o_clk_DFF_8> 
+INFO:Xst:2261 - The FF/Latch <PWR_15_o_clk_DFF_9> in Unit <mar> is equivalent to the following 3 FFs/Latches, which will be removed : <PWR_16_o_clk_DFF_10> <PWR_17_o_clk_DFF_11> <PWR_18_o_clk_DFF_12> 
+INFO:Xst:2261 - The FF/Latch <PWR_152_o_clk_DFF_21> in Unit <reg> is equivalent to the following 7 FFs/Latches, which will be removed : <PWR_153_o_clk_DFF_22> <PWR_156_o_clk_DFF_25> <PWR_154_o_clk_DFF_23> <PWR_155_o_clk_DFF_24> <PWR_159_o_clk_DFF_28> <PWR_157_o_clk_DFF_26> <PWR_158_o_clk_DFF_27> 
 WARNING:Xst:3001 - This design contains one or more registers or latches with an active
    asynchronous set and asynchronous reset. While this circuit can be built,
    it creates a sub-optimal implementation in terms of area, power and
@@ -650,7 +657,8 @@ WARNING:Xst:2042 - Unit cpu: 32 internal tristates are replaced by logic (pull-u
 WARNING:Xst:2040 - Unit cpu: 8 multi-source signals are replaced by logic (pull-up yes): main_bus<0>, main_bus<1>, main_bus<2>, main_bus<3>, main_bus<4>, main_bus<5>, main_bus<6>, main_bus<7>.
 WARNING:Xst:2042 - Unit alu: 8 internal tristates are replaced by logic (pull-up yes): res_out<0>, res_out<1>, res_out<2>, res_out<3>, res_out<4>, res_out<5>, res_out<6>, res_out<7>.
 WARNING:Xst:2042 - Unit mem: 8 internal tristates are replaced by logic (pull-up yes): data_out<0>, data_out<1>, data_out<2>, data_out<3>, data_out<4>, data_out<5>, data_out<6>, data_out<7>.
-WARNING:Xst:2042 - Unit mar: 4 internal tristates are replaced by logic (pull-up yes): stored_value<0>, stored_value<1>, stored_value<2>, stored_value<3>.
+WARNING:Xst:2042 - Unit mar: 4 internal tristates are replaced by logic (pull-up yes): output<0>, output<1>, output<2>, output<3>.
+WARNING:Xst:2042 - Unit pc: 8 internal tristates are replaced by logic (pull-up yes): Madd_count[3]_GND_6_o_add_0_OUT[3:0]_cy<0>, Madd_count[3]_GND_6_o_add_0_OUT[3:0]_lut<1>, Madd_count[3]_GND_6_o_add_0_OUT[3:0]_lut<2>, Madd_count[3]_GND_6_o_add_0_OUT[3:0]_lut<3>, output<0>, output<1>, output<2>, output<3>.
 
 Optimizing unit <cpu> ...
 
@@ -662,7 +670,7 @@ WARNING:Xst:2677 - Node <cu_inst/do_14> of sequential type is unconnected in blo
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 2.
-FlipFlop reg_A_inst/PWR_148_o_clk_DFF_17 has been replicated 1 time(s)
+FlipFlop reg_A_inst/PWR_152_o_clk_DFF_21 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -670,8 +678,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 50
- Flip-Flops                                            : 50
+# Registers                                            : 52
+ Flip-Flops                                            : 52
 
 =========================================================================
 
@@ -694,23 +702,23 @@ Top Level Output File Name         : cpu.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1347
+# BELS                             : 1346
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 20
-#      LUT3                        : 151
-#      LUT4                        : 91
-#      LUT5                        : 30
-#      LUT6                        : 637
+#      LUT2                        : 23
+#      LUT3                        : 128
+#      LUT4                        : 90
+#      LUT5                        : 44
+#      LUT6                        : 640
 #      MUXCY                       : 14
-#      MUXF7                       : 256
-#      MUXF8                       : 128
+#      MUXF7                       : 258
+#      MUXF8                       : 129
 #      VCC                         : 1
 #      XORCY                       : 16
-# FlipFlops/Latches                : 191
-#      FD                          : 36
+# FlipFlops/Latches                : 193
+#      FD                          : 40
 #      FDC                         : 4
-#      FDCE                        : 10
+#      FDCE                        : 8
 #      LD                          : 13
 #      LDE                         : 128
 # Clock Buffers                    : 2
@@ -726,15 +734,15 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             191  out of  126800     0%  
- Number of Slice LUTs:                  931  out of  63400     1%  
-    Number used as Logic:               931  out of  63400     1%  
+ Number of Slice Registers:             193  out of  126800     0%  
+ Number of Slice LUTs:                  927  out of  63400     1%  
+    Number used as Logic:               927  out of  63400     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    935
-   Number with an unused Flip Flop:     744  out of    935    79%  
-   Number with an unused LUT:             4  out of    935     0%  
-   Number of fully used LUT-FF pairs:   187  out of    935    20%  
+ Number of LUT Flip Flop pairs used:    932
+   Number with an unused Flip Flop:     739  out of    932    79%  
+   Number with an unused LUT:             5  out of    932     0%  
+   Number of fully used LUT-FF pairs:   188  out of    932    20%  
    Number of unique control sets:        33
 
 IO Utilization: 
@@ -762,37 +770,37 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
---------------------------------------------------------+--------------------------------+-------+
-Clock Signal                                            | Clock buffer(FF name)          | Load  |
---------------------------------------------------------+--------------------------------+-------+
-clk_sig(clk_sig1:O)                                     | BUFG(*)(pc_inst/count_0)       | 46    |
-mem_inst/_n0545(mem_inst/_n0545<3>1:O)                  | NONE(*)(mem_inst/mem_obj<0>_1) | 8     |
-mem_inst/_n0549(mem_inst/_n0549<3>1:O)                  | NONE(*)(mem_inst/mem_obj<1>_0) | 8     |
-mem_inst/_n0553(mem_inst/_n0553<3>1:O)                  | NONE(*)(mem_inst/mem_obj<2>_0) | 8     |
-mem_inst/_n0557(mem_inst/_n0557<3>1:O)                  | NONE(*)(mem_inst/mem_obj<3>_1) | 8     |
-mem_inst/_n0561(mem_inst/_n0561<3>1:O)                  | NONE(*)(mem_inst/mem_obj<4>_0) | 8     |
-mem_inst/_n0565(mem_inst/_n0565<3>1:O)                  | NONE(*)(mem_inst/mem_obj<5>_0) | 8     |
-mem_inst/_n0569(mem_inst/_n0569<3>1:O)                  | NONE(*)(mem_inst/mem_obj<6>_0) | 8     |
-mem_inst/_n0573(mem_inst/_n0573<3>1:O)                  | NONE(*)(mem_inst/mem_obj<7>_0) | 8     |
-mem_inst/_n0577(mem_inst/_n0577<3>1:O)                  | NONE(*)(mem_inst/mem_obj<8>_1) | 8     |
-mem_inst/_n0581(mem_inst/_n0581<3>1:O)                  | NONE(*)(mem_inst/mem_obj<9>_0) | 8     |
-mem_inst/_n0585(mem_inst/_n0585<3>1:O)                  | NONE(*)(mem_inst/mem_obj<10>_0)| 8     |
-mem_inst/_n0589(mem_inst/_n0589<3>1:O)                  | NONE(*)(mem_inst/mem_obj<11>_1)| 8     |
-mem_inst/_n0593(mem_inst/_n0593<3>1:O)                  | NONE(*)(mem_inst/mem_obj<12>_0)| 8     |
-mem_inst/_n0597(mem_inst/_n0597<3>1:O)                  | NONE(*)(mem_inst/mem_obj<13>_1)| 8     |
-mem_inst/_n0601(mem_inst/_n0601<3>1:O)                  | NONE(*)(mem_inst/mem_obj<14>_0)| 8     |
-mem_inst/_n0605(mem_inst/_n0605<3>1:O)                  | NONE(*)(mem_inst/mem_obj<15>_7)| 8     |
-clk                                                     | IBUF+BUFG                      | 4     |
-cu_inst/do_11_G(cu_inst/counter[3]_counter[3]_OR_39_o:O)| NONE(*)(cu_inst/do_0)          | 5     |
-cu_inst/do_3_G(cu_inst/do_3_G:O)                        | NONE(*)(cu_inst/do_3)          | 1     |
-cu_inst/do_5_G(cu_inst/do_5_G:O)                        | NONE(*)(cu_inst/do_5)          | 1     |
-cu_inst/do_7_G(cu_inst/do_7_G:O)                        | NONE(*)(cu_inst/do_7)          | 1     |
-cu_inst/do_10_G(cu_inst/do_10_G:O)                      | NONE(*)(cu_inst/do_10)         | 1     |
-cu_inst/do_8_G(cu_inst/do_8_G:O)                        | NONE(*)(cu_inst/do_8)          | 1     |
-cu_inst/do_12_G(cu_inst/do_12_G:O)                      | NONE(*)(cu_inst/do_12)         | 1     |
-cu_inst/do_13_G(cu_inst/do_13_G:O)                      | NONE(*)(cu_inst/do_13)         | 1     |
-cu_inst/do_16_G(cu_inst/do_16_G:O)                      | NONE(*)(cu_inst/do_16)         | 1     |
---------------------------------------------------------+--------------------------------+-------+
+--------------------------------------------------------+------------------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)                    | Load  |
+--------------------------------------------------------+------------------------------------------+-------+
+clk_sig(clk_sig1:O)                                     | BUFG(*)(reg_op_inst/PWR_152_o_clk_DFF_21)| 48    |
+mem_inst/_n0545(mem_inst/_n0545<3>1:O)                  | NONE(*)(mem_inst/mem_obj<0>_1)           | 8     |
+mem_inst/_n0549(mem_inst/_n0549<3>1:O)                  | NONE(*)(mem_inst/mem_obj<1>_0)           | 8     |
+mem_inst/_n0553(mem_inst/_n0553<3>1:O)                  | NONE(*)(mem_inst/mem_obj<2>_0)           | 8     |
+mem_inst/_n0557(mem_inst/_n0557<3>1:O)                  | NONE(*)(mem_inst/mem_obj<3>_1)           | 8     |
+mem_inst/_n0561(mem_inst/_n0561<3>1:O)                  | NONE(*)(mem_inst/mem_obj<4>_0)           | 8     |
+mem_inst/_n0565(mem_inst/_n0565<3>1:O)                  | NONE(*)(mem_inst/mem_obj<5>_0)           | 8     |
+mem_inst/_n0569(mem_inst/_n0569<3>1:O)                  | NONE(*)(mem_inst/mem_obj<6>_0)           | 8     |
+mem_inst/_n0573(mem_inst/_n0573<3>1:O)                  | NONE(*)(mem_inst/mem_obj<7>_0)           | 8     |
+mem_inst/_n0577(mem_inst/_n0577<3>1:O)                  | NONE(*)(mem_inst/mem_obj<8>_1)           | 8     |
+mem_inst/_n0581(mem_inst/_n0581<3>1:O)                  | NONE(*)(mem_inst/mem_obj<9>_0)           | 8     |
+mem_inst/_n0585(mem_inst/_n0585<3>1:O)                  | NONE(*)(mem_inst/mem_obj<10>_0)          | 8     |
+mem_inst/_n0589(mem_inst/_n0589<3>1:O)                  | NONE(*)(mem_inst/mem_obj<11>_1)          | 8     |
+mem_inst/_n0593(mem_inst/_n0593<3>1:O)                  | NONE(*)(mem_inst/mem_obj<12>_0)          | 8     |
+mem_inst/_n0597(mem_inst/_n0597<3>1:O)                  | NONE(*)(mem_inst/mem_obj<13>_1)          | 8     |
+mem_inst/_n0601(mem_inst/_n0601<3>1:O)                  | NONE(*)(mem_inst/mem_obj<14>_0)          | 8     |
+mem_inst/_n0605(mem_inst/_n0605<3>1:O)                  | NONE(*)(mem_inst/mem_obj<15>_7)          | 8     |
+clk                                                     | IBUF+BUFG                                | 4     |
+cu_inst/do_11_G(cu_inst/counter[3]_counter[3]_OR_43_o:O)| NONE(*)(cu_inst/do_0)                    | 5     |
+cu_inst/do_3_G(cu_inst/do_3_G:O)                        | NONE(*)(cu_inst/do_3)                    | 1     |
+cu_inst/do_5_G(cu_inst/do_5_G:O)                        | NONE(*)(cu_inst/do_5)                    | 1     |
+cu_inst/do_7_G(cu_inst/do_7_G:O)                        | NONE(*)(cu_inst/do_7)                    | 1     |
+cu_inst/do_10_G(cu_inst/do_10_G:O)                      | NONE(*)(cu_inst/do_10)                   | 1     |
+cu_inst/do_8_G(cu_inst/do_8_G:O)                        | NONE(*)(cu_inst/do_8)                    | 1     |
+cu_inst/do_12_G(cu_inst/do_12_G:O)                      | NONE(*)(cu_inst/do_12)                   | 1     |
+cu_inst/do_13_G(cu_inst/do_13_G:O)                      | NONE(*)(cu_inst/do_13)                   | 1     |
+cu_inst/do_16_G(cu_inst/do_16_G:O)                      | NONE(*)(cu_inst/do_16)                   | 1     |
+--------------------------------------------------------+------------------------------------------+-------+
 (*) These 26 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -806,9 +814,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.900ns (Maximum Frequency: 344.828MHz)
-   Minimum input arrival time before clock: 0.689ns
-   Maximum output required time after clock: 1.106ns
+   Minimum period: 2.891ns (Maximum Frequency: 345.901MHz)
+   Minimum input arrival time before clock: 0.680ns
+   Maximum output required time after clock: 1.102ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -817,83 +825,82 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_sig'
-  Clock period: 2.900ns (frequency: 344.828MHz)
-  Total number of paths / destination ports: 3101 / 40
+  Clock period: 2.891ns (frequency: 345.901MHz)
+  Total number of paths / destination ports: 3120 / 40
 -------------------------------------------------------------------------
-Delay:               2.900ns (Levels of Logic = 9)
-  Source:            reg_A_inst/PWR_148_o_clk_DFF_17_1 (FF)
-  Destination:       reg_op_inst/stored_value_5 (FF)
+Delay:               2.891ns (Levels of Logic = 8)
+  Source:            reg_A_inst/stored_value_3 (FF)
+  Destination:       reg_B_inst/stored_value_7 (FF)
   Source Clock:      clk_sig rising
   Destination Clock: clk_sig rising
 
-  Data Path: reg_A_inst/PWR_148_o_clk_DFF_17_1 to reg_op_inst/stored_value_5
+  Data Path: reg_A_inst/stored_value_3 to reg_B_inst/stored_value_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.361   0.379  reg_A_inst/PWR_148_o_clk_DFF_17_1 (reg_A_inst/PWR_148_o_clk_DFF_17_1)
-     LUT2:I0->O            1   0.097   0.279  reg_a_alu<0>LogicTrst1 (reg_a_alu<0>)
-     MUXCY:DI->O           1   0.337   0.000  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<0> (alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<1> (alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<2> (alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<3> (alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<4> (alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_cy<4>)
-     XORCY:CI->O           3   0.370   0.389  alu_inst/Madd_GND_209_o_GND_209_o_add_0_OUT_xor<5> (alu_inst/GND_209_o_GND_209_o_add_0_OUT<5>)
-     LUT3:I1->O            4   0.097   0.393  reg_A_inst/Mmux_n004661_SW0 (N58)
-     LUT6:I4->O            1   0.097   0.000  reg_A_inst/Mmux_n004661 (reg_A_inst/n0046<5>)
-     FD:D                      0.008          reg_A_inst/stored_value_5
+     FD:C->Q               4   0.361   0.393  reg_A_inst/stored_value_3 (reg_A_inst/stored_value_3)
+     LUT2:I0->O            1   0.097   0.279  reg_a_alu<3>LogicTrst1 (reg_a_alu<3>)
+     MUXCY:DI->O           1   0.337   0.000  alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<3> (alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<4> (alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<5> (alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<6> (alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_cy<6>)
+     XORCY:CI->O           4   0.370   0.393  alu_inst/Madd_GND_218_o_GND_218_o_add_0_OUT_xor<7> (alu_inst/GND_218_o_GND_218_o_add_0_OUT<7>)
+     LUT3:I1->O            3   0.097   0.389  main_bus<7>LogicTrst2_SW0_SW0 (N60)
+     LUT6:I4->O            1   0.097   0.000  reg_B_inst/Mmux_n004681 (reg_B_inst/n0046<7>)
+     FD:D                      0.008          reg_B_inst/stored_value_7
     ----------------------------------------
-    Total                      2.900ns (1.459ns logic, 1.441ns route)
-                                       (50.3% logic, 49.7% route)
+    Total                      2.891ns (1.436ns logic, 1.455ns route)
+                                       (49.7% logic, 50.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0545'
-  Clock period: 2.688ns (frequency: 371.969MHz)
+  Clock period: 2.612ns (frequency: 382.907MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.688ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<0>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<0>_0 (LATCH)
+Delay:               2.612ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<0>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<0>_3 (LATCH)
   Source Clock:      mem_inst/_n0545 falling
   Destination Clock: mem_inst/_n0545 falling
 
-  Data Path: mem_inst/mem_obj<0>_0 to mem_inst/mem_obj<0>_0
+  Data Path: mem_inst/mem_obj<0>_3 to mem_inst/mem_obj<0>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.758  mem_inst/mem_obj<0>_0 (mem_inst/mem_obj<0>_0)
-     LUT6:I0->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_6 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_4_f71)
-     LUT3:I1->O            7   0.097   0.323  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7)
-     LUT6:I5->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_928_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_928_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<0>_0
+     LDE:G->Q             16   0.472   0.448  mem_inst/mem_obj<0>_3 (mem_inst/mem_obj<0>_3)
+     LUT4:I2->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21_SW0 (N156)
+     LUT6:I2->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f73)
+     LUT6:I4->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_938_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_938_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<0>_3
     ----------------------------------------
-    Total                      2.688ns (0.860ns logic, 1.828ns route)
-                                       (32.0% logic, 68.0% route)
+    Total                      2.612ns (0.860ns logic, 1.752ns route)
+                                       (32.9% logic, 67.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0549'
-  Clock period: 2.678ns (frequency: 373.357MHz)
+  Clock period: 2.567ns (frequency: 389.621MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.678ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<1>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<1>_0 (LATCH)
+Delay:               2.567ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<1>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<1>_3 (LATCH)
   Source Clock:      mem_inst/_n0549 falling
   Destination Clock: mem_inst/_n0549 falling
 
-  Data Path: mem_inst/mem_obj<1>_0 to mem_inst/mem_obj<1>_0
+  Data Path: mem_inst/mem_obj<1>_3 to mem_inst/mem_obj<1>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.748  mem_inst/mem_obj<1>_0 (mem_inst/mem_obj<1>_0)
-     LUT6:I1->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_6 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_4_f71)
-     LUT3:I1->O            7   0.097   0.323  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7)
-     LUT6:I5->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_912_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_912_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<1>_0
+     LDE:G->Q             16   0.472   0.448  mem_inst/mem_obj<1>_3 (mem_inst/mem_obj<1>_3)
+     LUT4:I2->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21_SW1 (N157)
+     LUT6:I3->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f73)
+     LUT6:I4->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_922_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_922_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<1>_3
     ----------------------------------------
-    Total                      2.678ns (0.860ns logic, 1.818ns route)
-                                       (32.1% logic, 67.9% route)
+    Total                      2.567ns (0.860ns logic, 1.707ns route)
+                                       (33.5% logic, 66.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0553'
@@ -911,10 +918,10 @@ Delay:               2.612ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDE:G->Q             16   0.472   0.448  mem_inst/mem_obj<2>_4 (mem_inst/mem_obj<2>_4)
-     LUT4:I2->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW2 (N186)
+     LUT4:I2->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW2 (N168)
      LUT6:I2->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f74)
      LUT6:I4->O           16   0.097   0.364  main_bus<4>LogicTrst2 (main_bus<4>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_888_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_888_o)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_904_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_904_o)
      LDE:D                    -0.028          mem_inst/mem_obj<2>_4
     ----------------------------------------
     Total                      2.612ns (0.860ns logic, 1.752ns route)
@@ -936,10 +943,10 @@ Delay:               2.567ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDE:G->Q             16   0.472   0.448  mem_inst/mem_obj<3>_4 (mem_inst/mem_obj<3>_4)
-     LUT4:I2->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW3 (N187)
+     LUT4:I2->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW3 (N169)
      LUT6:I3->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f74)
      LUT6:I4->O           16   0.097   0.364  main_bus<4>LogicTrst2 (main_bus<4>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_872_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_872_o)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_888_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_888_o)
      LDE:D                    -0.028          mem_inst/mem_obj<3>_4
     ----------------------------------------
     Total                      2.567ns (0.860ns logic, 1.707ns route)
@@ -947,53 +954,53 @@ Delay:               2.567ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0561'
-  Clock period: 2.604ns (frequency: 383.966MHz)
+  Clock period: 2.528ns (frequency: 395.632MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.604ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<4>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<4>_0 (LATCH)
+Delay:               2.528ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<4>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<4>_3 (LATCH)
   Source Clock:      mem_inst/_n0561 falling
   Destination Clock: mem_inst/_n0561 falling
 
-  Data Path: mem_inst/mem_obj<4>_0 to mem_inst/mem_obj<4>_0
+  Data Path: mem_inst/mem_obj<4>_3 to mem_inst/mem_obj<4>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.758  mem_inst/mem_obj<4>_0 (mem_inst/mem_obj<4>_0)
-     LUT6:I0->O            2   0.097   0.300  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_51 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_4_f72)
-     LUT3:I2->O            7   0.097   0.323  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7)
-     LUT6:I5->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_864_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_864_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<4>_0
+     LDE:G->Q             16   0.472   0.364  mem_inst/mem_obj<4>_3 (mem_inst/mem_obj<4>_3)
+     LUT4:I3->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21_SW0 (N156)
+     LUT6:I2->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f73)
+     LUT6:I4->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_874_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_874_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<4>_3
     ----------------------------------------
-    Total                      2.604ns (0.860ns logic, 1.744ns route)
-                                       (33.0% logic, 67.0% route)
+    Total                      2.528ns (0.860ns logic, 1.668ns route)
+                                       (34.0% logic, 66.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0565'
-  Clock period: 2.594ns (frequency: 385.446MHz)
+  Clock period: 2.483ns (frequency: 402.804MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.594ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<5>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<5>_0 (LATCH)
+Delay:               2.483ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<5>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<5>_3 (LATCH)
   Source Clock:      mem_inst/_n0565 falling
   Destination Clock: mem_inst/_n0565 falling
 
-  Data Path: mem_inst/mem_obj<5>_0 to mem_inst/mem_obj<5>_0
+  Data Path: mem_inst/mem_obj<5>_3 to mem_inst/mem_obj<5>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.748  mem_inst/mem_obj<5>_0 (mem_inst/mem_obj<5>_0)
-     LUT6:I1->O            2   0.097   0.300  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_51 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_4_f72)
-     LUT3:I2->O            7   0.097   0.323  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7)
-     LUT6:I5->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_848_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_848_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<5>_0
+     LDE:G->Q             16   0.472   0.364  mem_inst/mem_obj<5>_3 (mem_inst/mem_obj<5>_3)
+     LUT4:I3->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21_SW1 (N157)
+     LUT6:I3->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f73)
+     LUT6:I4->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_858_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_858_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<5>_3
     ----------------------------------------
-    Total                      2.594ns (0.860ns logic, 1.734ns route)
-                                       (33.1% logic, 66.9% route)
+    Total                      2.483ns (0.860ns logic, 1.623ns route)
+                                       (34.6% logic, 65.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0569'
@@ -1011,10 +1018,10 @@ Delay:               2.528ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDE:G->Q             16   0.472   0.364  mem_inst/mem_obj<6>_5 (mem_inst/mem_obj<6>_5)
-     LUT4:I3->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_41_SW2 (N196)
+     LUT4:I3->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_41_SW2 (N178)
      LUT6:I2->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_41 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f75)
      LUT6:I4->O           16   0.097   0.364  main_bus<5>LogicTrst2 (main_bus<5>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[5]_MUX_822_o11 (mem_inst/addr_in[3]_data_in[5]_MUX_822_o)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[5]_MUX_838_o11 (mem_inst/addr_in[3]_data_in[5]_MUX_838_o)
      LDE:D                    -0.028          mem_inst/mem_obj<6>_5
     ----------------------------------------
     Total                      2.528ns (0.860ns logic, 1.668ns route)
@@ -1036,10 +1043,10 @@ Delay:               2.483ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDE:G->Q             16   0.472   0.364  mem_inst/mem_obj<7>_4 (mem_inst/mem_obj<7>_4)
-     LUT4:I3->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW3 (N187)
+     LUT4:I3->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31_SW3 (N169)
      LUT6:I3->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f7_31 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4_f74)
      LUT6:I4->O           16   0.097   0.364  main_bus<4>LogicTrst2 (main_bus<4>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_808_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_808_o)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[4]_MUX_824_o11 (mem_inst/addr_in[3]_data_in[4]_MUX_824_o)
      LDE:D                    -0.028          mem_inst/mem_obj<7>_4
     ----------------------------------------
     Total                      2.483ns (0.860ns logic, 1.623ns route)
@@ -1047,203 +1054,203 @@ Delay:               2.483ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0577'
-  Clock period: 2.772ns (frequency: 360.698MHz)
+  Clock period: 2.842ns (frequency: 351.914MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.772ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<8>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<8>_0 (LATCH)
+Delay:               2.842ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<8>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<8>_3 (LATCH)
   Source Clock:      mem_inst/_n0577 falling
   Destination Clock: mem_inst/_n0577 falling
 
-  Data Path: mem_inst/mem_obj<8>_0 to mem_inst/mem_obj<8>_0
+  Data Path: mem_inst/mem_obj<8>_3 to mem_inst/mem_obj<8>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.758  mem_inst/mem_obj<8>_0 (mem_inst/mem_obj<8>_0)
-     LUT6:I0->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_5 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_154_o_3_f71)
-     LUT3:I1->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_800_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_800_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<8>_0
+     LDE:G->Q             16   0.472   0.625  mem_inst/mem_obj<8>_3 (mem_inst/mem_obj<8>_3)
+     LUT4:I0->O            1   0.097   0.693  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW0 (N151)
+     LUT6:I0->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_810_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_810_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<8>_3
     ----------------------------------------
-    Total                      2.772ns (0.860ns logic, 1.912ns route)
-                                       (31.0% logic, 69.0% route)
+    Total                      2.842ns (0.860ns logic, 1.982ns route)
+                                       (30.3% logic, 69.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0581'
-  Clock period: 2.762ns (frequency: 362.004MHz)
+  Clock period: 2.832ns (frequency: 353.157MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.762ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<9>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<9>_0 (LATCH)
+Delay:               2.832ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<9>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<9>_3 (LATCH)
   Source Clock:      mem_inst/_n0581 falling
   Destination Clock: mem_inst/_n0581 falling
 
-  Data Path: mem_inst/mem_obj<9>_0 to mem_inst/mem_obj<9>_0
+  Data Path: mem_inst/mem_obj<9>_3 to mem_inst/mem_obj<9>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.748  mem_inst/mem_obj<9>_0 (mem_inst/mem_obj<9>_0)
-     LUT6:I1->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_5 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_154_o_3_f71)
-     LUT3:I1->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_784_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_784_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<9>_0
+     LDE:G->Q             16   0.472   0.625  mem_inst/mem_obj<9>_3 (mem_inst/mem_obj<9>_3)
+     LUT4:I0->O            1   0.097   0.683  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW1 (N152)
+     LUT6:I1->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_794_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_794_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<9>_3
     ----------------------------------------
-    Total                      2.762ns (0.860ns logic, 1.902ns route)
-                                       (31.1% logic, 68.9% route)
+    Total                      2.832ns (0.860ns logic, 1.972ns route)
+                                       (30.4% logic, 69.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0585'
-  Clock period: 2.590ns (frequency: 386.041MHz)
+  Clock period: 2.660ns (frequency: 375.996MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.590ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<10>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<10>_0 (LATCH)
+Delay:               2.660ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<10>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<10>_3 (LATCH)
   Source Clock:      mem_inst/_n0585 falling
   Destination Clock: mem_inst/_n0585 falling
 
-  Data Path: mem_inst/mem_obj<10>_0 to mem_inst/mem_obj<10>_0
+  Data Path: mem_inst/mem_obj<10>_3 to mem_inst/mem_obj<10>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.576  mem_inst/mem_obj<10>_0 (mem_inst/mem_obj<10>_0)
-     LUT6:I3->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_5 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_154_o_3_f71)
-     LUT3:I1->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_768_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_768_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<10>_0
+     LDE:G->Q             16   0.472   0.625  mem_inst/mem_obj<10>_3 (mem_inst/mem_obj<10>_3)
+     LUT4:I0->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW2 (N153)
+     LUT6:I3->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_778_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_778_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<10>_3
     ----------------------------------------
-    Total                      2.590ns (0.860ns logic, 1.730ns route)
-                                       (33.2% logic, 66.8% route)
+    Total                      2.660ns (0.860ns logic, 1.800ns route)
+                                       (32.3% logic, 67.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0589'
-  Clock period: 2.635ns (frequency: 379.449MHz)
+  Clock period: 2.705ns (frequency: 369.741MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.635ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<11>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<11>_0 (LATCH)
+Delay:               2.705ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<11>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<11>_3 (LATCH)
   Source Clock:      mem_inst/_n0589 falling
   Destination Clock: mem_inst/_n0589 falling
 
-  Data Path: mem_inst/mem_obj<11>_0 to mem_inst/mem_obj<11>_0
+  Data Path: mem_inst/mem_obj<11>_3 to mem_inst/mem_obj<11>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.621  mem_inst/mem_obj<11>_0 (mem_inst/mem_obj<11>_0)
-     LUT6:I2->O            2   0.097   0.383  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_5 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_154_o_3_f71)
-     LUT3:I1->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_752_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_752_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<11>_0
+     LDE:G->Q             16   0.472   0.625  mem_inst/mem_obj<11>_3 (mem_inst/mem_obj<11>_3)
+     LUT4:I0->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW3 (N154)
+     LUT6:I2->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_762_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_762_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<11>_3
     ----------------------------------------
-    Total                      2.635ns (0.860ns logic, 1.775ns route)
-                                       (32.6% logic, 67.4% route)
+    Total                      2.705ns (0.860ns logic, 1.845ns route)
+                                       (31.8% logic, 68.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0593'
-  Clock period: 2.688ns (frequency: 371.969MHz)
+  Clock period: 2.797ns (frequency: 357.577MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.688ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<12>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<12>_0 (LATCH)
+Delay:               2.797ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<12>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<12>_3 (LATCH)
   Source Clock:      mem_inst/_n0593 falling
   Destination Clock: mem_inst/_n0593 falling
 
-  Data Path: mem_inst/mem_obj<12>_0 to mem_inst/mem_obj<12>_0
+  Data Path: mem_inst/mem_obj<12>_3 to mem_inst/mem_obj<12>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.758  mem_inst/mem_obj<12>_0 (mem_inst/mem_obj<12>_0)
-     LUT6:I0->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_3_f71)
-     LUT3:I2->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_736_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_736_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<12>_0
+     LDE:G->Q             16   0.472   0.580  mem_inst/mem_obj<12>_3 (mem_inst/mem_obj<12>_3)
+     LUT4:I1->O            1   0.097   0.693  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW0 (N151)
+     LUT6:I0->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_746_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_746_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<12>_3
     ----------------------------------------
-    Total                      2.688ns (0.860ns logic, 1.828ns route)
-                                       (32.0% logic, 68.0% route)
+    Total                      2.797ns (0.860ns logic, 1.937ns route)
+                                       (30.8% logic, 69.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0597'
-  Clock period: 2.678ns (frequency: 373.357MHz)
+  Clock period: 2.787ns (frequency: 358.860MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.678ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<13>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<13>_0 (LATCH)
+Delay:               2.787ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<13>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<13>_3 (LATCH)
   Source Clock:      mem_inst/_n0597 falling
   Destination Clock: mem_inst/_n0597 falling
 
-  Data Path: mem_inst/mem_obj<13>_0 to mem_inst/mem_obj<13>_0
+  Data Path: mem_inst/mem_obj<13>_3 to mem_inst/mem_obj<13>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.748  mem_inst/mem_obj<13>_0 (mem_inst/mem_obj<13>_0)
-     LUT6:I1->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_3_f71)
-     LUT3:I2->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_720_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_720_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<13>_0
+     LDE:G->Q             16   0.472   0.580  mem_inst/mem_obj<13>_3 (mem_inst/mem_obj<13>_3)
+     LUT4:I1->O            1   0.097   0.683  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW1 (N152)
+     LUT6:I1->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_730_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_730_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<13>_3
     ----------------------------------------
-    Total                      2.678ns (0.860ns logic, 1.818ns route)
-                                       (32.1% logic, 67.9% route)
+    Total                      2.787ns (0.860ns logic, 1.927ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0601'
-  Clock period: 2.506ns (frequency: 398.979MHz)
+  Clock period: 2.615ns (frequency: 382.468MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.506ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<14>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<14>_0 (LATCH)
+Delay:               2.615ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<14>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<14>_3 (LATCH)
   Source Clock:      mem_inst/_n0601 falling
   Destination Clock: mem_inst/_n0601 falling
 
-  Data Path: mem_inst/mem_obj<14>_0 to mem_inst/mem_obj<14>_0
+  Data Path: mem_inst/mem_obj<14>_3 to mem_inst/mem_obj<14>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.576  mem_inst/mem_obj<14>_0 (mem_inst/mem_obj<14>_0)
-     LUT6:I3->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_3_f71)
-     LUT3:I2->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_704_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_704_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<14>_0
+     LDE:G->Q             16   0.472   0.580  mem_inst/mem_obj<14>_3 (mem_inst/mem_obj<14>_3)
+     LUT4:I1->O            1   0.097   0.511  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW2 (N153)
+     LUT6:I3->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_714_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_714_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<14>_3
     ----------------------------------------
-    Total                      2.506ns (0.860ns logic, 1.646ns route)
-                                       (34.3% logic, 65.7% route)
+    Total                      2.615ns (0.860ns logic, 1.755ns route)
+                                       (32.9% logic, 67.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_inst/_n0605'
-  Clock period: 2.551ns (frequency: 391.942MHz)
+  Clock period: 2.660ns (frequency: 375.996MHz)
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               2.551ns (Levels of Logic = 4)
-  Source:            mem_inst/mem_obj<15>_0 (LATCH)
-  Destination:       mem_inst/mem_obj<15>_0 (LATCH)
+Delay:               2.660ns (Levels of Logic = 4)
+  Source:            mem_inst/mem_obj<15>_3 (LATCH)
+  Destination:       mem_inst/mem_obj<15>_3 (LATCH)
   Source Clock:      mem_inst/_n0605 falling
   Destination Clock: mem_inst/_n0605 falling
 
-  Data Path: mem_inst/mem_obj<15>_0 to mem_inst/mem_obj<15>_0
+  Data Path: mem_inst/mem_obj<15>_3 to mem_inst/mem_obj<15>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE:G->Q             15   0.472   0.621  mem_inst/mem_obj<15>_0 (mem_inst/mem_obj<15>_0)
-     LUT6:I2->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_4 (mem_inst/Mmux_addr_in[3]_mem_obj[15][0]_Mux_103_o_3_f71)
-     LUT3:I2->O            7   0.097   0.407  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f71 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7)
-     LUT6:I4->O           16   0.097   0.364  main_bus<0>LogicTrst4 (main_bus<0>)
-     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[0]_MUX_688_o11 (mem_inst/addr_in[3]_data_in[0]_MUX_688_o)
-     LDE:D                    -0.028          mem_inst/mem_obj<15>_0
+     LDE:G->Q             16   0.472   0.580  mem_inst/mem_obj<15>_3 (mem_inst/mem_obj<15>_3)
+     LUT4:I1->O            1   0.097   0.556  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21_SW3 (N154)
+     LUT6:I2->O            2   0.097   0.299  mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f7_21 (mem_inst/Mmux_addr_in[3]_mem_obj[15][7]_wide_mux_275_OUT_3_f73)
+     LUT6:I5->O           16   0.097   0.364  main_bus<3>LogicTrst5 (main_bus<3>)
+     LUT3:I2->O            1   0.097   0.000  mem_inst/Mmux_addr_in[3]_data_in[3]_MUX_698_o11 (mem_inst/addr_in[3]_data_in[3]_MUX_698_o)
+     LDE:D                    -0.028          mem_inst/mem_obj<15>_3
     ----------------------------------------
-    Total                      2.551ns (0.860ns logic, 1.691ns route)
-                                       (33.7% logic, 66.3% route)
+    Total                      2.660ns (0.860ns logic, 1.800ns route)
+                                       (32.3% logic, 67.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -1269,28 +1276,28 @@ Delay:               1.120ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sig'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              0.689ns (Levels of Logic = 1)
+Offset:              0.680ns (Levels of Logic = 1)
   Source:            rst (PAD)
-  Destination:       pc_inst/count_0 (FF)
+  Destination:       reg_op_inst/PWR_152_o_clk_DFF_21 (FF)
   Destination Clock: clk_sig rising
 
-  Data Path: rst to pc_inst/count_0
+  Data Path: rst to reg_op_inst/PWR_152_o_clk_DFF_21
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   0.001   0.339  rst_IBUF (rst_IBUF)
-     FDCE:CLR                  0.349          pc_inst/count_0
+     IBUF:I->O            12   0.001   0.330  rst_IBUF (rst_IBUF)
+     FDCE:CLR                  0.349          reg_op_inst/PWR_152_o_clk_DFF_21
     ----------------------------------------
-    Total                      0.689ns (0.350ns logic, 0.339ns route)
-                                       (50.8% logic, 49.2% route)
+    Total                      0.680ns (0.350ns logic, 0.330ns route)
+                                       (51.5% logic, 48.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              0.689ns (Levels of Logic = 1)
+Offset:              0.680ns (Levels of Logic = 1)
   Source:            rst (PAD)
   Destination:       cu_inst/counter_3 (FF)
   Destination Clock: clk falling
@@ -1299,31 +1306,31 @@ Offset:              0.689ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   0.001   0.339  rst_IBUF (rst_IBUF)
+     IBUF:I->O            12   0.001   0.330  rst_IBUF (rst_IBUF)
      FDC:CLR                   0.349          cu_inst/counter_0
     ----------------------------------------
-    Total                      0.689ns (0.350ns logic, 0.339ns route)
-                                       (50.8% logic, 49.2% route)
+    Total                      0.680ns (0.350ns logic, 0.330ns route)
+                                       (51.5% logic, 48.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sig'
   Total number of paths / destination ports: 16 / 8
 -------------------------------------------------------------------------
-Offset:              1.106ns (Levels of Logic = 2)
-  Source:            reg_op_inst/PWR_148_o_clk_DFF_17 (FF)
+Offset:              1.102ns (Levels of Logic = 2)
+  Source:            reg_op_inst/PWR_152_o_clk_DFF_21 (FF)
   Destination:       op<7> (PAD)
   Source Clock:      clk_sig rising
 
-  Data Path: reg_op_inst/PWR_148_o_clk_DFF_17 to op<7>
+  Data Path: reg_op_inst/PWR_152_o_clk_DFF_21 to op<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.361   0.321  reg_op_inst/PWR_148_o_clk_DFF_17 (reg_op_inst/PWR_148_o_clk_DFF_17)
-     INV:I->O              8   0.113   0.311  reg_op_inst/PWR_148_o_clk_DFF_17_inv1_INV_0 (reg_op_inst/PWR_148_o_clk_DFF_17_inv)
+     FDCE:C->Q             9   0.361   0.316  reg_op_inst/PWR_152_o_clk_DFF_21 (reg_op_inst/PWR_152_o_clk_DFF_21)
+     INV:I->O              8   0.113   0.311  reg_op_inst/PWR_152_o_clk_DFF_21_inv1_INV_0 (reg_op_inst/PWR_152_o_clk_DFF_21_inv)
      OBUFT:T->O                0.000          op_7_OBUFT (op<7>)
     ----------------------------------------
-    Total                      1.106ns (0.474ns logic, 0.632ns route)
-                                       (42.9% logic, 57.1% route)
+    Total                      1.102ns (0.474ns logic, 0.628ns route)
+                                       (43.0% logic, 57.0% route)
 
 =========================================================================
 
@@ -1343,31 +1350,31 @@ Clock to Setup on destination clock clk_sig
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |    2.900|         |         |         |
-cu_inst/do_10_G|         |    1.892|         |         |
-cu_inst/do_11_G|         |    3.538|         |         |
-cu_inst/do_12_G|         |    3.280|         |         |
-cu_inst/do_13_G|         |    2.212|         |         |
-cu_inst/do_3_G |         |    1.910|         |         |
-cu_inst/do_5_G |         |    1.915|         |         |
-cu_inst/do_7_G |         |    3.381|         |         |
-cu_inst/do_8_G |         |    1.892|         |         |
-mem_inst/_n0545|         |    2.574|         |         |
-mem_inst/_n0549|         |    2.529|         |         |
-mem_inst/_n0553|         |    2.565|         |         |
-mem_inst/_n0557|         |    2.520|         |         |
-mem_inst/_n0561|         |    2.490|         |         |
-mem_inst/_n0565|         |    2.445|         |         |
-mem_inst/_n0569|         |    2.481|         |         |
-mem_inst/_n0573|         |    2.436|         |         |
-mem_inst/_n0577|         |    2.826|         |         |
-mem_inst/_n0581|         |    2.781|         |         |
-mem_inst/_n0585|         |    2.565|         |         |
-mem_inst/_n0589|         |    2.649|         |         |
-mem_inst/_n0593|         |    2.781|         |         |
-mem_inst/_n0597|         |    2.736|         |         |
-mem_inst/_n0601|         |    2.520|         |         |
-mem_inst/_n0605|         |    2.604|         |         |
+clk_sig        |    2.891|         |         |         |
+cu_inst/do_10_G|         |    1.342|         |         |
+cu_inst/do_11_G|         |    3.442|         |         |
+cu_inst/do_12_G|         |    3.140|         |         |
+cu_inst/do_13_G|         |    1.937|         |         |
+cu_inst/do_3_G |         |    1.297|         |         |
+cu_inst/do_5_G |         |    1.307|         |         |
+cu_inst/do_7_G |         |    3.288|         |         |
+cu_inst/do_8_G |         |    1.279|         |         |
+mem_inst/_n0545|         |    2.490|         |         |
+mem_inst/_n0549|         |    2.445|         |         |
+mem_inst/_n0553|         |    2.481|         |         |
+mem_inst/_n0557|         |    2.436|         |         |
+mem_inst/_n0561|         |    2.406|         |         |
+mem_inst/_n0565|         |    2.361|         |         |
+mem_inst/_n0569|         |    2.397|         |         |
+mem_inst/_n0573|         |    2.352|         |         |
+mem_inst/_n0577|         |    2.888|         |         |
+mem_inst/_n0581|         |    2.878|         |         |
+mem_inst/_n0585|         |    2.706|         |         |
+mem_inst/_n0589|         |    2.751|         |         |
+mem_inst/_n0593|         |    2.843|         |         |
+mem_inst/_n0597|         |    2.833|         |         |
+mem_inst/_n0601|         |    2.661|         |         |
+mem_inst/_n0605|         |    2.706|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cu_inst/do_10_G
@@ -1384,7 +1391,7 @@ Clock to Setup on destination clock cu_inst/do_11_G
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.527|         |
+clk            |         |         |    2.482|         |
 clk_sig        |         |         |    2.622|         |
 ---------------+---------+---------+---------+---------+
 
@@ -1456,27 +1463,27 @@ Clock to Setup on destination clock mem_inst/_n0545
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0549
@@ -1484,27 +1491,27 @@ Clock to Setup on destination clock mem_inst/_n0549
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0553
@@ -1512,27 +1519,27 @@ Clock to Setup on destination clock mem_inst/_n0553
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0557
@@ -1540,27 +1547,27 @@ Clock to Setup on destination clock mem_inst/_n0557
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0561
@@ -1568,27 +1575,27 @@ Clock to Setup on destination clock mem_inst/_n0561
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0565
@@ -1596,27 +1603,27 @@ Clock to Setup on destination clock mem_inst/_n0565
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0569
@@ -1624,27 +1631,27 @@ Clock to Setup on destination clock mem_inst/_n0569
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0573
@@ -1652,27 +1659,27 @@ Clock to Setup on destination clock mem_inst/_n0573
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0577
@@ -1680,27 +1687,27 @@ Clock to Setup on destination clock mem_inst/_n0577
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0581
@@ -1708,27 +1715,27 @@ Clock to Setup on destination clock mem_inst/_n0581
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0585
@@ -1736,27 +1743,27 @@ Clock to Setup on destination clock mem_inst/_n0585
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0589
@@ -1764,27 +1771,27 @@ Clock to Setup on destination clock mem_inst/_n0589
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0593
@@ -1792,27 +1799,27 @@ Clock to Setup on destination clock mem_inst/_n0593
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0597
@@ -1820,27 +1827,27 @@ Clock to Setup on destination clock mem_inst/_n0597
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0601
@@ -1848,27 +1855,27 @@ Clock to Setup on destination clock mem_inst/_n0601
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_inst/_n0605
@@ -1876,40 +1883,40 @@ Clock to Setup on destination clock mem_inst/_n0605
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_sig        |         |         |    4.007|         |
-cu_inst/do_11_G|         |         |    3.686|         |
-cu_inst/do_12_G|         |         |    3.429|         |
+clk_sig        |         |         |    3.952|         |
+cu_inst/do_11_G|         |         |    4.054|         |
+cu_inst/do_12_G|         |         |    3.751|         |
 cu_inst/do_13_G|         |         |    2.472|         |
-cu_inst/do_7_G |         |         |    3.529|         |
-mem_inst/_n0545|         |         |    2.688|         |
-mem_inst/_n0549|         |         |    2.678|         |
+cu_inst/do_7_G |         |         |    3.900|         |
+mem_inst/_n0545|         |         |    2.612|         |
+mem_inst/_n0549|         |         |    2.567|         |
 mem_inst/_n0553|         |         |    2.612|         |
 mem_inst/_n0557|         |         |    2.567|         |
-mem_inst/_n0561|         |         |    2.604|         |
-mem_inst/_n0565|         |         |    2.594|         |
+mem_inst/_n0561|         |         |    2.528|         |
+mem_inst/_n0565|         |         |    2.483|         |
 mem_inst/_n0569|         |         |    2.528|         |
 mem_inst/_n0573|         |         |    2.483|         |
-mem_inst/_n0577|         |         |    2.772|         |
-mem_inst/_n0581|         |         |    2.762|         |
-mem_inst/_n0585|         |         |    2.590|         |
-mem_inst/_n0589|         |         |    2.635|         |
-mem_inst/_n0593|         |         |    2.688|         |
-mem_inst/_n0597|         |         |    2.678|         |
-mem_inst/_n0601|         |         |    2.506|         |
-mem_inst/_n0605|         |         |    2.551|         |
+mem_inst/_n0577|         |         |    2.842|         |
+mem_inst/_n0581|         |         |    2.832|         |
+mem_inst/_n0585|         |         |    2.660|         |
+mem_inst/_n0589|         |         |    2.705|         |
+mem_inst/_n0593|         |         |    2.797|         |
+mem_inst/_n0597|         |         |    2.787|         |
+mem_inst/_n0601|         |         |    2.615|         |
+mem_inst/_n0605|         |         |    2.660|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.41 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.93 secs
  
 --> 
 
-Total memory usage is 4700340 kilobytes
+Total memory usage is 4700020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  151 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :  152 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
 

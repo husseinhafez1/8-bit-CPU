@@ -45,9 +45,9 @@ begin
 	process(reg_a_in,reg_b_in,op)
 	begin
 		if op = '0' then
-			result <= ('0' & reg_a_in) + ('0' & reg_b_in);
+			result <= ext(reg_a_in, 9) + ext(reg_b_in, 9);
 		elsif op = '1' then
-			result <= ('0' & reg_a_in) - ('0' & reg_b_in);
+			result <= ext(reg_a_in, 9) - ext(reg_b_in, 9);
 		end if;
 	end process;
 
