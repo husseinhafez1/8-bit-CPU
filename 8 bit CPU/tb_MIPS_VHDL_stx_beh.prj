@@ -1,0 +1,8 @@
+vhdl isim_temp "register.vhd"
+vhdl isim_temp "instruction_memory.vhd"
+vhdl isim_temp "data_memory.vhd"
+vhdl isim_temp "control_unit.vhd"
+vhdl isim_temp "ALU_control_unit.vhd"
+vhdl isim_temp "ALU.vhd"
+vhdl isim_temp "cpu.vhd"
+vhdl isim_temp "cpu_test.vhd"

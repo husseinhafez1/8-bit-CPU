@@ -28,7 +28,7 @@ Port (
 clk: in std_logic;
 rst: in std_logic;
 inst: in std_logic_vector(3 downto 0);
-do : out std_logic_vector(16 downto 0)
+do : out std_logic_vector(16 downto 0) -- control signal
 );
 end control_unit;
 

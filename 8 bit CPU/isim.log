@@ -28,10 +28,9 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 0 ps, Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 0 ps, Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 0 ps, Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 25 ns(5), Instance /cpu_tb/cpu1_obj/mem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 200 ns(4), Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 700 ns(3), Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 700 ns(3), Instance /cpu_tb/cpu1_obj/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 45 ns(4), Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 100 ns(3), Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 100 ns(3), Instance /cpu_tb/uut/alu_inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).

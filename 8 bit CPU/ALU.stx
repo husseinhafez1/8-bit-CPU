@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.63 secs
  
 --> Parameter xsthdpdir set to C:/Users/husse/Desktop/dababy/cpu/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.63 secs
  
 --> Reading design: alu.prj
 
@@ -42,16 +42,14 @@ TABLE OF CONTENTS
 Parsing VHDL file "C:\Users\husse\Desktop\dababy\cpu\ALU.vhd" into library work
 Parsing entity <alu>.
 Parsing architecture <Behavioral> of entity <alu>.
-
-
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.96 secs
- 
+ERROR:HDLCompiler:69 - "C:\Users\husse\Desktop\dababy\cpu\ALU.vhd" Line 55: <en> is not declared.
+ERROR:HDLCompiler:854 - "C:\Users\husse\Desktop\dababy\cpu\ALU.vhd" Line 38: Unit <behavioral> ignored due to previous errors.
+VHDL file C:\Users\husse\Desktop\dababy\cpu\ALU.vhd ignored due to errors
 --> 
 
-Total memory usage is 4474096 kilobytes
+Total memory usage is 4474736 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

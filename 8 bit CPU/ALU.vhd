@@ -39,26 +39,21 @@ end entity;
 architecture Behavioral of alu is 
 
 signal result : std_logic_vector(8 downto 0);
+
 begin
 	
 	process(reg_a_in,reg_b_in,op)
 	begin
 		if op = '0' then
-			result <= ext(reg_a_in,9) + ext(reg_b_in,9);
+			result <= ('0' & reg_a_in) + ('0' & reg_b_in);
 		elsif op = '1' then
-			result <= ext(reg_a_in,9) - ext(reg_b_in,9);
+			result <= ('0' & reg_a_in) - ('0' & reg_b_in);
 		end if;
 	end process;
-	
-carry_out<= result(8) ;
+
+carry_out<= result(8);
 zero_flag<= '1' when result(7 downto 0) = "00000000" else '0';
-res_out<=result(7 downto 0) when en='1' else (others=>'Z');	
-	
-	
-	
-	
-	
-	
-	
+res_out<=result(7 downto 0) when en='1' else (others=>'Z');
+
 end Behavioral;
 

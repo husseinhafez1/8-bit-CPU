@@ -1,1 +1,7 @@
+work	"ALU.vhd"
+work	"MAR.vhd"
+work	"control_unit.vhd"
+work	"cpu.vhd"
+work	"memory.vhd"
+work	"program_counter.vhd"
 work	"register.vhd"

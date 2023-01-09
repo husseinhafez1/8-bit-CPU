@@ -44,48 +44,8 @@ architecture Behavioral of mem is
 type mem_type is array(0 to 15) of std_logic_vector(7 downto 0);
 
 
---function init(file_name:string) return mem_type is
---
---file file_data:text;
---variable fstatus : file_open_status;
---variable text_line:line;
---variable line_content:std_logic_vector(7 downto 0);
---variable i:integer:=0; 
---
---variable temp_mem:mem_type;
---
---begin
---
---	file_open(fstatus,file_data,file_name,READ_MODE);
---	if fstatus = OPEN_OK then
---		while(i<16) loop
---			readLine(file_data,text_line);
---			read(text_line,line_content);
---			temp_mem(i):=line_content;
---			i:=i+1;
---		end loop;
---	end if;
---return temp_mem;
---end function init;
-
-
 signal mem_obj:mem_type :=(x"0E",x"2F",x"1E",x"5E",x"41",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"01");
 begin
-
---process(clk)
---begin
---	if rising_edge(clk) then
---		if load = '1' then
---			mem_obj(to_integer(unsigned(addr_in)))<=data_in;
---		end if;
---		
---		if oe = '1' then
---			data_out <= mem_obj(to_integer(unsigned(addr_in)));
---		else
---			data_out<="ZZZZZZZZ";
---		end if;
---	end if;
---end process;
 
 mem_obj(to_integer(unsigned(addr_in)))<=data_in when load = '1';
 data_out <= mem_obj(to_integer(unsigned(addr_in))) when oe = '1' else (others=>'Z');

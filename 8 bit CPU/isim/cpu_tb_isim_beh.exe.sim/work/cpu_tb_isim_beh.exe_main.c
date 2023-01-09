@@ -42,10 +42,10 @@ int main(int argc, char **argv)
     work_a_2023191012_3212880686_init();
     work_a_0832606739_3212880686_init();
     work_a_1415465652_3212880686_init();
-    work_a_1912994691_3212880686_init();
+    work_a_1912994691_2372691052_init();
 
 
-    xsi_register_tops("work_a_1912994691_3212880686");
+    xsi_register_tops("work_a_1912994691_2372691052");
 
     IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");
     xsi_register_ieee_std_logic_1164(IEEE_P_2592010699);
